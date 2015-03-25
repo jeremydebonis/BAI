@@ -1,0 +1,12 @@
+<input placeholder="search utilisateur" class="form-control" ng-model="query">
+	<div align="left">
+		<div class="list-group">
+			<a href="#/utilisateur/{{utilisateur.id}}" class="list-group-item"
+				ng-repeat="utilisateur in utilisateurs | filter:query">
+				<div class="col-md-3 col-sm-3">
+					<img src="{{utilisateur.avatar}}" alt="{{utilisateur.pseudo}}" class="img-circle img-responsive" />
+				</div>
+				{{student.name}}
+			</a>
+		</div>
+	</div>

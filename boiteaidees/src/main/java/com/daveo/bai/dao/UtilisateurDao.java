@@ -1,5 +1,7 @@
 package com.daveo.bai.dao;
 
+import java.util.List;
+
 import com.daveo.bai.model.Utilisateur;
 
 public interface UtilisateurDao {
@@ -40,5 +42,13 @@ public interface UtilisateurDao {
 	 * @param idUtilisateur le id Utilisateur
 	 */
 	public void supprimerUtilisateur(Integer idUtilisateur);
+
+	
+	/**
+	 * Selectionner l'ensemble des Utilisateurs.
+	 *
+	 * @return List<Utilisateur>
+	 */
+	public List<Utilisateur> selectionnerUtilisateurs() ;
 
 }

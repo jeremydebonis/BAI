@@ -1,5 +1,7 @@
 package com.daveo.bai.dao;
 
+import java.util.List;
+
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -50,6 +52,12 @@ public class UtilisateurDaoImpl implements UtilisateurDao {
 	public void supprimerUtilisateur(Integer idUtilisateur) {
 		getCurrentSession().delete(idUtilisateur);
 
+	}
+
+	@SuppressWarnings("unchecked")
+	@Override
+	public List<Utilisateur> selectionnerUtilisateurs() {
+		return getCurrentSession().createQuery("FROM Utilisateur").list();
 	}
 
 }
